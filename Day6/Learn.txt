@@ -1,0 +1,115 @@
+What are Collections?
+
+Collections store multiple values in one variable.
+
+Python provides four main collection types:
+
+Collection	Ordered	Mutable	Duplicates	Syntax
+List	✅	✅	✅	[]
+Tuple	✅	❌	✅	()
+Set	❌	✅	❌	{}
+Dictionary	✅	✅	Keys: ❌, Values: ✅	{key:value}
+
+1. List
+
+Lists are ordered and mutable.
+numbers = [10, 20, 30, 40]
+
+print(numbers)
+
+Access elements:
+-----------------
+print(numbers[0])
+print(numbers[-1])
+
+Common List Methods
+===================
+Add
+numbers = [10,20]
+numbers.append(30)
+print(numbers)
+
+Insert
+numbers.insert(1,15)
+print(numbers)
+
+Remove
+numbers.remove(15)
+print(numbers)
+
+Contains
+print(20 in numbers) ---o/p- True
+
+Sort
+numbers=[5,2,8,1]
+numbers.sort()
+print(numbers).  --o/p- [1,2,5,8]
+
+2.Tuple
+--------
+Immutable collection.
+colors=("Red","Blue","Green")
+print(colors)
+
+Cannot modify:
+colors[0]="Black"
+
+Output
+TypeError
+
+3. Set
+------------
+Stores unique values.
+numbers={1,2,2,3,3,4}
+print(numbers)
+
+Output- {1,2,3,4}
+
+Add
+numbers.add(10)
+Remove
+numbers.remove(2)
+Contains
+print(10 in numbers)
+
+4. Dictionary
+Stores key-value pairs.
+
+student={
+    "name":"Deepu",
+    "age":32
+}
+
+Access:
+print(student["name"])
+
+Output -- Deepu
+
+Add
+student["city"]="Hyderabad"
+
+Update
+student["age"]=33
+
+Remove
+student.pop("city")
+
+Keys
+print(student.keys())
+
+Values
+print(student.values())
+
+Items
+print(student.items())
+
+Iteration
+===========
+List
+for num in numbers:
+    print(num)
+
+Dictionary
+for key,value in student.items():
+    print(key,value)
+
