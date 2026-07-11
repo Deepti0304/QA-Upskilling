@@ -1,0 +1,39 @@
+SOLID Principles
+
+S - Single Responsibility Principle
+A class should have only one reason to change.
+
+Example:
+LoginPage handles only login functionality.
+
+--------------------------------
+
+O - Open Closed Principle
+Open for extension, closed for modification.
+
+Example:
+DriverFactory can support new browsers without changing test scripts.
+
+--------------------------------
+
+L - Liskov Substitution Principle
+Child classes should replace parent classes without breaking behavior.
+
+Example:
+ChromeDriver and FirefoxDriver can replace Driver.
+
+--------------------------------
+
+I - Interface Segregation Principle
+Do not force classes to implement methods they do not need.
+
+Example:
+Separate WebDriver actions and Mobile actions.
+
+--------------------------------
+
+D - Dependency Inversion Principle
+Depend on abstractions, not concrete classes.
+
+Example:
+Pass driver object to LoginPage constructor instead of creating ChromeDriver inside LoginPage.
