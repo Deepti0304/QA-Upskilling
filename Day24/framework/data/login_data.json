@@ -1,0 +1,32 @@
+[
+    {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "test_case": "Valid Login",
+        "expected_result": "success"
+    },
+    {
+        "username": "standard_user",
+        "password": "wrong_password",
+        "test_case": "Invalid Password",
+        "expected_result": "failure"
+    },
+    {
+        "username": "locked_out_user",
+        "password": "secret_sauce",
+        "test_case": "Locked User",
+        "expected_result": "failure"
+    },
+    {
+        "username": "",
+        "password": "",
+        "test_case": "Empty Fields",
+        "expected_result": "failure"
+    },
+    {
+        "username": "' OR '1'='1",
+        "password": "secret_sauce",
+        "test_case": "SQL Injection",
+        "expected_result": "failure"
+    }
+]

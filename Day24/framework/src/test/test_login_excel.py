@@ -1,0 +1,37 @@
+import pytest
+
+from src.main.pages.login_page import LoginPage
+from src.main.utils.data_reader import DataReader
+from src.main.utils.config_reader import ConfigReader
+
+
+# Read Excel test data
+data = DataReader.read_excel("data/login_data.xlsx")
+
+# Read configuration
+config = ConfigReader()
+
+
+@pytest.mark.parametrize("test_data", data)
+def test_login_excel(driver, test_data):
+
+    # Open application using URL from config.ini
+    driver.get(config.get_base_url())
+
+    # Create Login Page object
+    login_page = LoginPage(driver)
+
+    # Perform login
+    login_page.login(
+        test_data["username"],
+        test_data["password"]
+    )
+
+    # Validate result
+    if test_data["expected_result"] == "success":
+
+        assert "inventory" in driver.current_url
+
+    else:
+
+        assert "inventory" not in driver.current_url

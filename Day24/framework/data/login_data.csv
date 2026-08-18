@@ -1,0 +1,6 @@
+username,password,test_case,expected_result
+standard_user,secret_sauce,Valid Login,success
+standard_user,wrong_password,Invalid Password,failure
+locked_out_user,secret_sauce,Locked User,failure
+,,Empty Fields,failure
+' OR '1'='1,secret_sauce,SQL Injection,failure
