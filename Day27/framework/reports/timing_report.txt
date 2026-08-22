@@ -1,0 +1,29 @@
+DAY 27 - CROSS BROWSER & PARALLEL EXECUTION
+
+Sequential Execution
+--------------------
+Browsers: Chrome, Firefox, Edge
+Execution Mode: Sequential
+
+Start Time:
+End Time:
+Total Duration:
+
+
+Parallel Execution
+------------------
+Browsers: Chrome, Firefox, Edge
+Execution Mode: pytest-xdist
+Workers: 3
+
+Start Time:
+End Time:
+Total Duration:
+
+
+Comparison
+----------
+Sequential Duration:
+Parallel Duration:
+Time Saved:
+Improvement Percentage:
